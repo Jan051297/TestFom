@@ -17,7 +17,7 @@ namespace Trinkspiel
                 for (int a = 0; a < md.anzSpieler; a++)
                 {
                     Console.WriteLine("_______________________________________________________________");
-                    Console.WriteLine("Hallo " + pe[a].name + " Deine Frage:\nIch hab: " + fragen.lines[Qiterate++]);
+                    Console.WriteLine("Hallo " + pe[a].Name + " Deine Frage:\nIch hab: " + fragen.lines[Qiterate++]);
                     string antwort = Console.ReadLine();
                     if (antwort == "ja" || antwort == "Ja")
                     {
@@ -40,7 +40,7 @@ namespace Trinkspiel
             for (int i = 0; i < md.anzSpieler; i++)
             {
                 Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-                Console.WriteLine(pe[i].name + " musste " + pe[i].yesCount + " mal " + md.anzSchlücke +
+                Console.WriteLine(pe[i].Name + " musste " + pe[i].yesCount + " mal " + md.anzSchlücke +
                     " Schlücke trinken.\nDas sind insgesamt " + (pe[i].yesCount * md.anzSchlücke) + " Schlücke");
                 Console.WriteLine("Es wurden dem nach " + pe[i].noCount + " Fragen mit nein und " + pe[i].yesCount
                      + " Fragen mit ja beantwortet");
@@ -51,7 +51,11 @@ namespace Trinkspiel
     class Spieler //Spielerklasse
     {
 
-        public string name;
+        private string name;
+        public string Name {
+            get => name;
+        }
+
         public int yesCount;
         public int noCount;
         public Spieler(string _name)
@@ -83,7 +87,7 @@ namespace Trinkspiel
             Console.WriteLine("Eingabekontrolle:");
             for (int i = 0; i < anzSpieler; i++)
             {
-                Console.WriteLine("Spieler " + (i + 1) + " wurde der Name " + sp[i].name + " gegeben.");
+                Console.WriteLine("Spieler " + (i + 1) + " wurde der Name " + sp[i].Name + " gegeben.");
             }
             Console.WriteLine("Rundenanzahl: " + anzRunden);
             Console.WriteLine("Schlücke bei JA: " + anzSchlücke);
