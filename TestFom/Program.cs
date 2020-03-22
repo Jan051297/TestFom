@@ -4,8 +4,8 @@ namespace Trinkspiel
 {
     class FragenTxt //Fragen werden aus txt Datei gezogen
     {
-        string text = System.IO.File.ReadAllText(@"C:\Users\Lars Kaiser\Documents\trinkspiel_fragen.txt");
-        public string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Lars Kaiser\Documents\trinkspiel_fragen.txt");
+        string text = System.IO.File.ReadAllText(@"C:\Users\kaise\Source\Repos\TestFom\TestFom\trinkspiel_fragen.txt");
+        public string[] lines = System.IO.File.ReadAllLines(@"C:\Users\kaise\Source\Repos\TestFom\TestFom\trinkspiel_fragen.txt");
     }
     class Moderator
     {
